@@ -1,0 +1,119 @@
+/* Fonts */
+@font-face {
+    font-family: 'PilowlavaAtome';
+    src: url('../fonts/Pilowlava-Atome.woff2') format('woff2'),
+         url('../fonts/Pilowlava-Atome.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PilowlavaRegular';
+    src: url('../fonts/Pilowlava-Regular.woff2') format('woff2'),
+         url('../fonts/Pilowlava-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+/* 
+@font-face {
+    font-family: "Inter";
+
+} */
+/* Reset margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    color: #000;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* min-height: 100vh; */
+}
+
+/* Header and Navigation styling */
+header {
+    width: 100%;
+    background-color: #fff;
+    color: #000;
+    padding: 20px 0;
+    text-align: center;
+    /* min-height: 10; */
+} 
+
+.menu {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #000
+}
+
+.menu ul {
+    list-style-type: none;
+    display: flex;
+    gap: 3em;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #000;
+    font-size: 1em;
+}
+
+.logo h1 {
+    font-family: 'PilowlavaRegular';
+    font-size: 2.5em;
+    margin: 0;
+    color: #000;
+    -webkit-text-stroke: 0px black; /* No stroke initially */
+    transition: color 0.5s ease, -webkit-text-stroke 0.5s ease;
+}
+
+.logo h1:hover{
+    color: transparent; /* Makes the fill transparent */
+    -webkit-text-stroke: 1px black; /* Adds a 1px outline */
+}
+
+/* Styling for welcome text */
+main {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 80vh;
+    width: 100%;
+    /* max-width: 800px; */
+}
+
+.landing-text {
+    font-family: "PilowlavaRegular";
+    font-size: 6em;
+    font-weight: bold;
+    text-align: left;
+    margin-left: 10%;
+    -webkit-text-stroke: 1px black; /* Outline setting */
+    -webkit-text-fill-color: black; /* Fill color initially */
+    transition: color 0.5s ease-in-out, -webkit-text-stroke 0.5s ease-in-out;
+}
+
+.landing-text:hover {
+    color: transparent; /* Makes the fill transparent */
+    -webkit-text-stroke: 1px black; /* Adds a 1px outline */
+}
+
+@keyframes regularToAtome {
+    0% {
+        font-family: 'PilowlavaRegular', sans-serif;
+    }
+    100% {
+        font-family: 'PilowlavaAtome', sans-serif;
+    }
+}
